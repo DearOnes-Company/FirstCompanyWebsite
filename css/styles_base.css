@@ -1,0 +1,106 @@
+/* =========================
+   FONTS EINBINDEN
+========================= */
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/Lora/Lora-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+}
+
+/* =========================
+   CSS VARIABLEN
+========================= */
+:root {
+    --color-bg:           #fffcf3;
+    --color-primary:      #7b4e4e;
+    --color-primary-dark: #5a3939;
+    --color-accent:       #F95c02;
+    --color-accent-hover: #d84f02;
+    --color-cta-bg:       #cebaaa;
+    --color-text:         #333;
+    --color-light:        #fffcf3;
+}
+
+/* =========================
+   RESET & BASIS
+========================= */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* =========================
+   Groeßere Textabstaende
+========================= */
+.extrabreit {
+    margin-bottom: 20px; /* Hier kannst du den Wert (px, em, rem) frei wählen */
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-light);
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+footer .links a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-light);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.2s ease;
+}
+
+footer .links a:hover {
+    opacity: 0.75;
+}
+
+@media (min-width: 1024px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 80px;
+    }
+}
